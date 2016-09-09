@@ -1,0 +1,29 @@
+{
+"name": "nadb",
+"version": "1.0.0",
+"dependencies": {
+	"node-ipc":"^8.1.1",
+
+	"express": "^4.13.4",
+	"express-session": "^1.13.0",
+	"body-parser":"^1.15.1",
+
+	"mongodb":"^2.2.9",
+	"mysql":"^2.10.2",
+
+	"randomstring": "^1.1.5",
+
+	"nodemailer":"^2.6.0",
+
+	"ejs":"^2.4.1",
+},
+"engines": {
+    "node": "6.2.1"
+},
+"scripts": {
+  "start": "node --expose_gc main.js",
+  "debug": "node --expose_gc main.js",
+  "cli"  : "node cli/cli.js"
+},
+"main": "main.js"
+}

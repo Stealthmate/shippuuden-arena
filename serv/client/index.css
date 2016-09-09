@@ -1,0 +1,181 @@
+@import url('fontlist.css');
+body {
+    margin: 0px;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.formpanel {
+    width: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s;
+}
+
+.formpanel.shown {
+    opacity: 1;
+    z-index: 10;
+}
+
+#eyes {
+    position: absolute;
+    width: 60vw;
+    height: 20vh;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#eyes>div {
+    position: absolute;
+    width: 20vw;
+    height: 9.5vw;
+    background: url('eye.png');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#lefteye {
+    transform: scaleX(-1.0);
+    left: 0%;
+}
+#righteye {
+    right: 0%;
+}
+#loginform>form {
+    position: relative;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.fieldlabel {
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-family: Naruto;
+}
+input {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+#submit {
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-family: Naruto;
+}
+
+.toggleregform {
+    height: 2vw;
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(calc(-50% - 0.2vw));
+    font-family: Naruto;
+
+    font-size: 2vw;
+
+    background: none;
+    border: none;
+    color: white;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: default;
+    transition: opacity 0.4s, text-shadow 0.4s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.toggleregform:hover {
+    text-shadow: 0 0 2vh red;
+}
+
+.toggleregform.shown {
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes sharingan_rotate {
+    0% {transform: translate(-50%, -50%) rotate(0deg);}
+    50% {transform: translate(-50%, -50%) rotate(180deg);}
+    100% {transform: translate(-50%, -50%) rotate(360deg);};
+}
+
+.sharingan {
+    background-image: url('sharingan.png');
+    background-size: cover;
+    width: 80vmin;
+    height: 80vmin;
+    z-index: 20;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: sharingan_rotate 3s infinite linear;
+    opacity: 0;
+    transition: opacity 2s;
+    pointer-events: none;
+}
+
+.sharingan.shown {
+    opacity: 0.2;
+}
+
+.tsukuyomi {
+    width: 49vmin;
+    height: 98vmin;
+    z-index: 20;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 2s;
+    pointer-events: none;
+}
+
+.tsukuyomi#left {
+    transform: translate(-100%, -50%);
+}
+
+.tsukuyomi#right {
+    transform: translate(0%, -50%);
+}
+
+@keyframes tsukuyomi_open_left {
+    from{left: 50%;}
+    to{left: -50%;}
+}
+
+@keyframes tsukuyomi_open_right {
+    from{left: 50%}
+    to{left:150%}
+}
+
+.tsukuyomi.shown {
+    opacity: 1;
+}
+
+.tsukuyomi.shown#left {
+    animation: 3s tsukuyomi_open_left 2s forwards;
+}
+
+.tsukuyomi.shown#right {
+    animation: 3s tsukuyomi_open_right 2s forwards;
+}
+
+#eyes.shown > div {
+    opacity: 1;
+}

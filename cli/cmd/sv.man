@@ -1,0 +1,7 @@
+Controls lifetime of NADB server daemon.
+Flags:
+
+    -start    : Starts the server
+    -kill     : Shuts down the server.
+    -restart  : Restarts the server.
+    -reload       : Sends a message to the server to reload all data without restarting.

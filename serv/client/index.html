@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="res/index.css"></link>
+    <link rel="stylesheet" type="text/css" href="res/registration_panel.css"></link>
+    <link rel="stylesheet" type="text/css" href="res/login_panel.css"></link>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="res/logreg.js"></script>
+</head>
+
+<body>
+
+    <div class="shown" id="eyes">
+        <div id="lefteye"> </div>
+        <div id="righteye"> </div>
+    </div>
+
+    <div class="sharingan"></div>
+    <img class="tsukuyomi" id="left"  src="res/tsukuyomi_left.png"></img>
+    <img class="tsukuyomi" id="right" src="res/tsukuyomi_right.png"></img>
+
+    <div class="wrapper">
+
+        <div class="toggleregform shown" id="toggle0">
+            Register
+        </div>
+        <div class="toggleregform" id="toggle1">
+            Login
+        </div>
+
+
+        <div class="formpanel shown" id="loginform">
+            <form action="./login" method="post">
+                <div class="fieldlabel" id="username">Username:</div>
+                <input class="login" id="username" type="text" name="username"></input>
+                <div class="fieldlabel" id="password">Password:</div>
+                <input class="login" id="password" type="password" name="password"></input>
+                <input class="login" id="submit" type="submit" value="Enter">
+            </form>
+        </div>
+
+        <div class="formpanel" id="registerform">
+            <div id="regform_wrapper">
+                <form action="./register" method="post">
+                    <div class="fieldlabel" id="username">Username:</div>
+                    <input class="register" id="username" type="text" name="username"></input>
+                    <div class="fieldlabel" id="email">E-mail:</div>
+                    <input class="register" id="email" type="email" name="email"></input>
+                    <div class="fieldlabel" id="password">Password:</div>
+                    <input class="register" id="password" type="password" name="password"></input>
+                    <input class="register" id="submit" type="submit" value="Register">
+                </form>
+
+            </div>
+
+            <div id="email_confirm">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+init();
+</script>
+
+</html>
